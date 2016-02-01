@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping 
+			PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.goodyang.examsystem.po.Subject" table="tb_subject">
+		<id name="subjectID">
+			<generator class="identity"></generator>
+		</id>
+		<property name="subjectTitle"></property>
+		<property name="subjectOptionA"></property>
+		<property name="subjectOptionB"></property>
+		<property name="subjectOptionC"></property>
+		<property name="subjectOptionD"></property>
+		<property name="subjectAnswer"></property>
+		<property name="subjectParse"></property>
+	</class>	
+</hibernate-mapping>
