@@ -9,6 +9,8 @@ public class Page {
 	private boolean hasPrePage;
 	private boolean hasNextPage;
 
+	public Page(){}		
+	
 	public Page(int everyPage, int totalCount, int totalPage, int currentPage,
 			int beginIndex, boolean hasPrePage, boolean hasNextPage) {
 		super();

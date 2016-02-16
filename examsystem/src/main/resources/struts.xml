@@ -10,5 +10,29 @@
 			<result name="success" type="redirect">/teacher/subjectAdd.jsp</result>
 			<result name="input">/teacher/subjectAdd.jsp</result>
 		</action>
+		
+		<action name="subjectParticular" class="com.goodyang.examsystem.action.SubjectParticularAction">
+			<result name="success">/teacher/subjectShow.jsp</result>
+		</action>
+		
+		<action name="subjectUpdateBefore" class="com.goodyang.examsystem.action.SubjectUpdateBefore">
+ 			<result name="success">/teacher/subjectUpdate.jsp</result><!--跳转到试题更新页面-->
+ 		</action>
+ 		
+ 		<action name="subjectUpdate" class="com.goodyang.examsystem.action.SubjectUpdateAction">
+ 			<result name="success">/teacher/subjectUpdate.jsp</result>
+ 		</action>
+ 		
+ 		<action name="subjectDelete" class="com.goodyang.examsystem.action.SubjectDeleteAction">
+ 			<result name="success" type="chain">subjectQuery</result>
+ 		</action>
+ 		
+ 		<action name="subjectLikeQuery" class="com.goodyang.examsystem.action.LikeQuerySubjectAction">
+ 			<result name="success">/teacher/subjectManage.jsp</result>
+ 		</action>
+ 		
+ 		<action name="subjectQuery" class="com.goodyang.examsystem.action.QuerySubjectAction">
+ 			<result name="success">/teacher/subjectManage.jsp</result>
+ 		</action>
 	</package>
 </struts>
