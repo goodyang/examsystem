@@ -41,5 +41,21 @@
  		<action name="queryStudentByClass" class="com.goodyang.examsystem.action.QueryStudentByClass">
  			<result name="success">/teacher/studentManage.jsp</result>
  		</action>
+ 		
+ 		<action name="login" class="com.goodyang.examsystem.action.LoginAction">
+ 			<result name="studentSuccess" type="chain">getRandomSubject</result><!--进入考试页面-->
+ 			<result name="teacherSuccess" type="redirect">/teacher/index.html</result><!--老师登录成功页面-->
+ 			<result name="input">/login.jsp</result><!--登录失败页面-->
+ 		</action>
+ 		<action name="getRandomSubject" class="com.goodyang.examsystem.action.GetRandomSubject">
+ 			<result name="success">/student/index.jsp</result><!--跳转到考试页面-->
+ 		</action>
+ 		
+ 		<action name="submitExam" class="com.goodyang.examsystem.action.SubmitExamAction">
+ 			<result name="success">/student/examResult.jsp</result><!--跳转到考试页面-->
+ 		</action>
+ 		<action name="showSubjectAnswer" class="com.goodyang.examsystem.action.ShowSubjectAnswer">
+ 			<result name="success">/student/showAnswer.jsp</result><!--跳转到考试页面-->
+ 		</action>
 	</package>
 </struts>
