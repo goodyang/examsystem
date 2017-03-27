@@ -36,4 +36,5 @@ public class Student {
 	public void setSclass(String sclass) {
 		this.sclass = sclass;
 	}
+	
 }

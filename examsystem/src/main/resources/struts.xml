@@ -34,5 +34,12 @@
  		<action name="subjectQuery" class="com.goodyang.examsystem.action.QuerySubjectAction">
  			<result name="success">/teacher/subjectManage.jsp</result>
  		</action>
+ 		
+ 		<action name="queryStudentByName" class="com.goodyang.examsystem.action.QueryStudentByName">
+ 			<result name="success">/teacher/studentManage.jsp</result>
+ 		</action>
+ 		<action name="queryStudentByClass" class="com.goodyang.examsystem.action.QueryStudentByClass">
+ 			<result name="success">/teacher/studentManage.jsp</result>
+ 		</action>
 	</package>
 </struts>

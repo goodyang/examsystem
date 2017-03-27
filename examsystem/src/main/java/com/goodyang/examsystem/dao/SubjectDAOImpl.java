@@ -117,7 +117,7 @@ public class SubjectDAOImpl implements SubjectDAO {
 	@Override
 	public int findLinkQueryCount(String subjectTitle) {
 		Session session = HibernateSessionFactory.getSession();
-		Query query = session.createQuery("from Subject as sub where sub.subjectTitle like : title");
+		Query query = session.createQuery("from Subject as sub where sub.subjectTitle like :title");
 		query.setString("title", "%"+subjectTitle+"%");
 		List list = query.list();
 		int count = list.size();
